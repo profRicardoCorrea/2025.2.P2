@@ -119,7 +119,7 @@ public class CategoriaService implements ICategoriaService {
         if (categoria == null) {
             throw new IllegalArgumentException("Categoria não encontrada");
         }
-        categoria.setStatus("ATIVA");
+        categoria.setAtiva(true);
         categoriaRepository.alterar(categoria);
     }
     
@@ -129,7 +129,7 @@ public class CategoriaService implements ICategoriaService {
         if (categoria == null) {
             throw new IllegalArgumentException("Categoria não encontrada");
         }
-        categoria.setStatus("INATIVA");
+        categoria.setAtiva(false);
         categoriaRepository.alterar(categoria);
     }
     
@@ -155,7 +155,7 @@ public class CategoriaService implements ICategoriaService {
         if (categoria.getNome() == null || categoria.getNome().trim().isEmpty()) {
             throw new IllegalArgumentException("Nome da categoria é obrigatório");
         }
-        if (categoria.getTipo() == null || categoria.getTipo().trim().isEmpty()) {
+        if (categoria.getTipoCategoria() == null || categoria.getTipoCategoria().trim().isEmpty()) {
             throw new IllegalArgumentException("Tipo da categoria é obrigatório");
         }
         if (categoria.getDescricao() == null || categoria.getDescricao().trim().isEmpty()) {

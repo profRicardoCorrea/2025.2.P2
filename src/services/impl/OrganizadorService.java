@@ -156,7 +156,7 @@ public class OrganizadorService implements IOrganizadorService {
         if (organizador == null) {
             throw new IllegalArgumentException("Organizador não encontrado");
         }
-        organizador.setStatus("ATIVO");
+        organizador.setAtivo(true);
         organizadorRepository.alterar(organizador);
     }
     
@@ -166,7 +166,7 @@ public class OrganizadorService implements IOrganizadorService {
         if (organizador == null) {
             throw new IllegalArgumentException("Organizador não encontrado");
         }
-        organizador.setStatus("INATIVO");
+        organizador.setAtivo(false);
         organizadorRepository.alterar(organizador);
     }
     
@@ -190,7 +190,7 @@ public class OrganizadorService implements IOrganizadorService {
         if (organizador.getEstado() == null || organizador.getEstado().trim().isEmpty()) {
             throw new IllegalArgumentException("Estado do organizador é obrigatório");
         }
-        if (organizador.getTipo() == null || organizador.getTipo().trim().isEmpty()) {
+        if (organizador.getTipoOrganizacao() == null || organizador.getTipoOrganizacao().trim().isEmpty()) {
             throw new IllegalArgumentException("Tipo do organizador é obrigatório");
         }
         

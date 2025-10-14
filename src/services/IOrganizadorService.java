@@ -13,7 +13,7 @@ public interface IOrganizadorService {
     List<Organizador> buscarOrganizadoresPorEmail(String email);
     List<Organizador> buscarOrganizadoresPorTelefone(String telefone);
     List<Organizador> buscarOrganizadoresPorCidade(String cidade);
-    List<Organizadores> buscarOrganizadoresPorEstado(String estado);
+    List<Organizador> buscarOrganizadoresPorEstado(String estado);
     List<Organizador> buscarOrganizadoresPorTipo(String tipo);
     List<Organizador> buscarOrganizadoresPorStatus(String status);
     List<Organizador> buscarOrganizadoresAtivos();

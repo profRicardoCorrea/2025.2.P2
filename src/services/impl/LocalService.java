@@ -196,7 +196,7 @@ public class LocalService implements ILocalService {
         if (local.getCapacidade() == null || local.getCapacidade() <= 0) {
             throw new IllegalArgumentException("Capacidade do local deve ser maior que zero");
         }
-        if (local.getTipo() == null || local.getTipo().trim().isEmpty()) {
+        if (local.getTipoLocal() == null || local.getTipoLocal().trim().isEmpty()) {
             throw new IllegalArgumentException("Tipo do local é obrigatório");
         }
     }

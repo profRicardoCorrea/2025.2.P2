@@ -103,9 +103,9 @@ public class Evento extends AbstractEvent {
         this.temCertificado = false;
     }
 
-    @Override
+     
     public String getTipoEvento() {
-        return "EVENTO";
+        return this.tipoEvento;
     }
 
     @Override
